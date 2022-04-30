@@ -1,0 +1,16 @@
+################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+.vs
+bin
+obj
+packages
+_ReSharper.*
+*.suo
+*.user
+/src/5 - FrontEnd/Assistcargo.Simon.FrontEnd/wwwroot/UploadedFiles/*
+!/src/5 - FrontEnd/Assistcargo.Simon.FrontEnd/wwwroot/UploadedFiles/.gitkeep
+
+/src/4 - ApplicationServices/Assistcargo.Simon.WebApi/Reports/*
+!/src/4 - ApplicationServices/Assistcargo.Simon.WebApi/Reports/.gitkeep
