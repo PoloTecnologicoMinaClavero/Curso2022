@@ -18,6 +18,8 @@
 //   decl.             cond.          paso
 for (var cantCara = 0; cantCara <= 12; cantCara+=2)
 {
+
+
     Console.WriteLine($"Mi bolsita tiene {cantCara} caramelos");
     //RECORDAR !!!! el paso lo hace al finalizar la ejecución
 }
