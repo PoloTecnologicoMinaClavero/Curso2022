@@ -73,22 +73,22 @@
 //Console.WriteLine("4 - Division");
 
 //Console.WriteLine("Ingrese la operacion a realizar");
-//string  operacion = Console.ReadLine();
+//int operacion = int.Parse(Console.ReadLine());
 
 //double resultado = 0;
 
 //switch (operacion)
 //{
-//    case "1":
+//    case 1:
 //        resultado = numero1 + numero2;
 //        break;
-//    case "2":
+//    case 2:
 //        resultado = numero1 - numero2;
 //        break;
-//    case "3":
+//    case 3:
 //        resultado = numero1 * numero2;
 //        break;
-//    case "4" when numero2 != 0:
+//    case 4 when numero2 != 0:
 //        resultado = numero1 / numero2;
 //        break;
 //    default:
@@ -103,48 +103,63 @@
 /*  EJEMPLO If-Else anidados */
 
 
-int numero1, numero2, numero3; //Declaramos las variables
+//int numero3; //Declaramos las variables
 
-Console.Write("Ingrese numero 1: ");
-numero1 = int.Parse(Console.ReadLine()); //ingresamos el primer numero
+//Console.Write("Ingrese numero 1: ");
+//var numero1 = int.Parse(Console.ReadLine()); //ingresamos el primer numero
 
-Console.Write("Ingrese numero 2: ");
-numero2 = int.Parse(Console.ReadLine()); //Ingresamos el segundo numero
+//Console.Write("Ingrese numero 2: ");
+//int numero2 = int.Parse(Console.ReadLine()); //Ingresamos el segundo numero
 
-Console.Write("Ingrese numero 3: ");
-numero3 = int.Parse(Console.ReadLine()); //Ingresamos el tercer numero
+//Console.Write("Ingrese numero 3: ");
+//numero3 = int.Parse(Console.ReadLine()); //Ingresamos el tercer numero
 
-if (numero1 > numero2) //numero1 es mayor
-{
-    //Instrucciones
-    if (numero1 > numero3) //numero1 es mayor
-    {
-        //Instrucciones
-        Console.WriteLine("El primer numero es el mayor: " + numero1);
-    }
-    else //numero3 es mayor
-    {
-        //Instrucciones
-        Console.WriteLine("El tercer numero es el mayor: " + numero3);
-    }
-}
-else //numero2 es mayor
-{
-    //Instrucciones
-    if (numero2 > numero3) //numero2 es mayor
-    {
-        //Instrucciones
-        Console.WriteLine("El segundo numero es el mayor: " + numero2);
-    }
-    else
-    {
-        //Instrucciones
-        Console.WriteLine("El tercer numero es el mayor: " + numero3);
-    }
-}
+//if (numero1 > numero2) //numero1 es mayor
+//{
+//    //Instrucciones
+//    if (numero1 > numero3) //numero1 es mayor
+//    {
+//        //Instrucciones
+//        Console.WriteLine("El primer numero es el mayor: " + numero1);
+//    }
+//    else //numero3 es mayor
+//    {
+//        //Instrucciones
+//        Console.WriteLine("El tercer numero es el mayor: " + numero3);
+//    }
+//}
+//else //numero2 es mayor
+//{
+//    //Instrucciones
+//    if (numero2 > numero3) //numero2 es mayor
+//    {
+//        //Instrucciones
+//        Console.WriteLine("El segundo numero es el mayor: " + numero2);
+//    }
+//    else
+//    {
+//        //Instrucciones
+//        Console.WriteLine("El tercer numero es el mayor: " + numero3);
+//    }
+//}
 
 
 //Lo que continue.....
+
+Console.WriteLine("Desea continuar? (S/N)");
+var texto = Console.ReadLine();
+
+if (texto.ToUpper() == "S")
+{
+    Console.WriteLine("Usted ingreso que SI");
+}else if (texto.ToLower() == "n")
+{
+    Console.WriteLine("Usted ingreso que NO");
+}
+else
+{
+    Console.WriteLine("Usted no entendió nada");
+}
 
 
 
