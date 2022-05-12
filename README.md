@@ -1,8 +1,10 @@
-# Polo Tecnológico Mina Clavero
+#  Julán Marcelo Zappia
+## Polo Tecnológico Mina Clavero
 ## Curso de Introduccion a NET 6.0 / Año 2022
 
 Este repositorio es parte del curso de Introduccion a NET 6.0 dictado por el Polo Tecnologico Mina Clavero.
 En este repositorio se encuentran los códigos usados de ejemplo en cada una de las clases.
+Copias fieles del repositorio del Polo Tecnológico Mina Clavero, obtenidas con Git y GitHub Desktop.
 
 Las clases se dictan por youtube, y pueden encontrarse aqui:
 
