@@ -16,15 +16,12 @@
 
 
 //   decl.             cond.          paso
-//for (var cantCara = 0; cantCara <= 12; cantCara+=2)
-//{
+for (var cantCara = 0; cantCara <= 12; cantCara+=2)
+{
 
 
-//    Console.WriteLine($"Mi bolsita tiene {cantCara} caramelos");
-    //RECORDAR !!!! el paso lo hace al finalizar la ejecución
-//}
 
-Console.Clear();
+    Console.Clear();
 
 Console.WriteLine("Ingrese su nombre completo por favor:: ";
 string nombrePersona  = Console.ReadLine():
@@ -36,7 +33,7 @@ Console.WriteLine("!Hola + nombrePersona");
 Console.WriteLine($"!Hola {nombrePersona});
 
 Console.Write("Desea continuar (S/N): ");
-string varSigue     = Console.ReadLine();
+string varSigue          = Console.ReadLine();
 string varMayuscula = varSigue.ToUpper();
 
 if varMayuscula == "S"
@@ -52,7 +49,7 @@ if varMayuscula == "S"
     Console.WriteLine($"!Hola {nombrePersona});
 
     Console.Write("Desea continuar (S/N): ");
-    string varSigue     = Console.ReadLine();
+    string varSigue          = Console.ReadLine();
     string varMayuscula = varSigue.ToUpper();
 }
 else
@@ -60,9 +57,14 @@ else
   if varMayuscula == "N"
   {
      Console.WriteLine("Programa finalizado correctamente");
-  }
-  else
-  {
+   }
+   else
+   {
      Console.WriteLine("Programa finalizado. Opción no válida");
-  }
+   }
+}
+
+
+    Console.WriteLine($"Mi bolsita tiene {cantCara} caramelos");
+    //RECORDAR !!!! el paso lo hace al finalizar la ejecución
 }
