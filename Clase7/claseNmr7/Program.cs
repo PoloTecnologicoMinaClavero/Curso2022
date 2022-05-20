@@ -49,4 +49,9 @@ for (int i = 0; i < numeros.Length; i++)
     Console.WriteLine(numeros[i]);
 }
 
+foreach (var item in numeros)
+{
+    Console.WriteLine(item);
+}
+
 
