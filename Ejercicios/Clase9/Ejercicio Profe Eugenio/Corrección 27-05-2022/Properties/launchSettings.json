@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Corrección 27-05-2022": {
+      "commandName": "Project"
+    },
+    "WSL": {
+      "commandName": "WSL2",
+      "environmentVariables": {},
+      "distributionName": ""
+    }
+  }
+}
