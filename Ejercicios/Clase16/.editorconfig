@@ -1,0 +1,7 @@
+﻿[*.{cs,vb}]
+
+# IDE0040: Agregar modificadores de accesibilidad
+dotnet_style_require_accessibility_modifiers = never
+
+# IDE0051: Quitar miembros privados no utilizados
+dotnet_diagnostic.IDE0051.severity = none
