@@ -5,46 +5,61 @@ namespace ConsoleApp1.Repositorio
 {
     public class RepositorioDePersonas
     {
-        public List<Persona> Personas { get; set; }
+        //Usamos un diccionario para guardar las personas.
+        public Dictionary<string, Persona> Personas { get; set; }
 
         public RepositorioDePersonas()
         {
-            Personas = new List<Persona>();
+            Personas = new Dictionary<string, Persona>();
         }
 
         public void Insertar(Persona persona)
         {
-            Personas.Add(persona);
+            var numeroDocumento = persona.NumeroDeDocumento;
+
+            var personaExiste = Personas.ContainsKey(numeroDocumento);
+            if (!personaExiste)
+            {
+                Personas[numeroDocumento] = persona;
+            }
         }
 
         public void Eliminar(string numeroDocumento)
         {
-            //Definir como eliminar una persona de la Lista de Personas.
+            Personas[numeroDocumento] = null;
         }
 
         public void Actualizar(Persona persona)
         {   
-            foreach (var personaActual in Personas)
+            var personaAActualizar = Personas[persona.NumeroDeDocumento];
+
+            if(personaAActualizar != null)
             {
-                if (personaActual.NumeroDeDocumento == persona.NumeroDeDocumento)
-                {
-                    personaActual.Nombre = persona.Nombre;
-                    personaActual.Apellido = persona.Apellido;
-                    personaActual.FechaNacimiento = persona.FechaNacimiento;
-                }
+                personaAActualizar.Nombre = persona.Nombre;
+                personaAActualizar.Apellido = persona.Apellido;
+                personaAActualizar.FechaNacimiento = persona.FechaNacimiento;
             }
         }
 
         public void Actualizar(string numeroDocumento, string nombre, string apellido)
         {
-            foreach (var personaActual in Personas)
+            var personaAActualizar = Personas[numeroDocumento];
+
+            if (personaAActualizar != null)
             {
-                if (personaActual.NumeroDeDocumento == numeroDocumento)
-                {
-                    personaActual.Nombre = nombre;
-                    personaActual.Apellido = apellido;
-                }
+                personaAActualizar.Nombre = nombre;
+                personaAActualizar.Apellido = apellido;
             }
+        }
+
+        public bool Existe(string numeroDeDocumento)
+        {
+            return Personas.ContainsKey(numeroDeDocumento);
+        }
+
+        public bool Existe(Persona persona)
+        {
+            return Existe(persona.NumeroDeDocumento);
         }
     }
 }
