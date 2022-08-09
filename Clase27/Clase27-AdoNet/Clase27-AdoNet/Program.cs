@@ -14,11 +14,5 @@ using (SqlConnection connection = new SqlConnection(connectionString))
         Console.WriteLine($"{reader["CustomerID"]} | {reader["CompanyName"]} | {reader["ContactName"]}");
     }
 
-    command = new SqlCommand("SELECT * FROM Suppliers", connection);
-    var reader2 = command.ExecuteReader();
-    while (reader2.Read())
-    {
-        Console.WriteLine($"{reader2["SupplierID"]} | {reader2["CompanyName"]} | {reader["ContactName"]}");
-    }
 
 }
