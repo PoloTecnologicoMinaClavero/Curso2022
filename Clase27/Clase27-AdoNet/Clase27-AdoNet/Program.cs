@@ -13,6 +13,4 @@ using (SqlConnection connection = new SqlConnection(connectionString))
     {
         Console.WriteLine($"{reader["CustomerID"]} | {reader["CompanyName"]} | {reader["ContactName"]}");
     }
-
-
 }
