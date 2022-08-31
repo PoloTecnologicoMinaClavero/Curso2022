@@ -1,0 +1,23 @@
+﻿@model List<UserViewModel>
+
+<h1>Users</h1>
+<hr />
+<p>Esta es la vista del action Index</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>UserName</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.UserName</td>
+            </tr>
+        }
+    </tbody>
+</table>
