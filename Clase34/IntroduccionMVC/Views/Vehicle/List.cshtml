@@ -1,0 +1,30 @@
+﻿@model VehicleListViewModel
+
+@*
+    Documentación de Bootstrap sobre Grid System para divs
+    https://getbootstrap.com/docs/5.1/layout/grid/
+*@
+
+<div class="row">
+    <div class="col-12">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Dominio</th>
+                    <th>Año de fabricación</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var vehiculo in Model.Vehiculos)
+                {
+                    <tr>
+                        <td>@vehiculo.Id</td>
+                        <td>@vehiculo.Dominio</td>
+                        <td>@vehiculo.AnioFabricacion</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
