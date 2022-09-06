@@ -24,7 +24,7 @@ namespace IntroduccionMVC.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Data Source=EZE-INCLUIT\\SQLEXPRESS2012;Initial Catalog=aspnet-IntroduccionMVC-E925FED6-ECB3-4836-977B-02C4DB56EBAF;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+                optionsBuilder.UseSqlServer("Data Source=DESKTOP-QIF7F0F\\SQLEXPRESS;Initial Catalog=aspnet-IntroduccionMVC-E925FED6-ECB3-4836-977B-02C4DB56EBAF;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
             }
         }
     }
