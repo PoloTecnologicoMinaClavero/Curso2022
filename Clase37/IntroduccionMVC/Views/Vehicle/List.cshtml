@@ -8,6 +8,11 @@
 
 <div class="row">
     <div class="col-12">
+        <a class="btn btn-success" asp-action="New" asp-controller="Vehicle">Agregar</a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
         <table class="table">
             <thead>
                 <tr>
@@ -18,13 +23,17 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach(var vehiculo in ViewBag.Vehicles)
+                @foreach (var vehiculo in ViewBag.Vehicles)
                 {
                     <tr>
                         <td>@vehiculo.Id</td>
                         <td>@vehiculo.Dominio</td>
                         <td>@vehiculo.AnioFabricacion</td>
-                        <td><a asp-action="Edit" asp-controller="Vehicle">Editar</a></td>
+                        <td>
+                            <a class="btn btn-primary" asp-action="Detail" asp-controller="Vehicle" asp-route-id="@vehiculo.Id">Ver</a>
+                            <a class="btn btn-warning" asp-action="Edit" asp-controller="Vehicle" asp-route-id="@vehiculo.Id">Editar</a>
+                            <a class="btn btn-danger" asp-action="Remove" asp-controller="Vehicle" asp-route-id="@vehiculo.Id">Eliminar</a>
+                        </td>
                     </tr>
                 }
             </tbody>
