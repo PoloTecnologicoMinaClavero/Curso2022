@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = ViewData["miTitulo"];
+}
+@*
+    Documentación de Bootstrap sobre Grid System para divs
+    https://getbootstrap.com/docs/5.1/layout/grid/
+*@
+
+<div class="row">
+    <div class="col-12">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Dominio</th>
+                    <th>Año de fabricación</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var vehiculo in ViewBag.Vehicles)
+                {
+                    <tr>
+                        <td>@vehiculo.Id</td>
+                        <td>@vehiculo.Dominio</td>
+                        <td>@vehiculo.AnioFabricacion</td>
+                        <td><a asp-action="Edit" asp-controller="Vehicle">Editar</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
