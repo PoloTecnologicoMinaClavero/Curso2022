@@ -1,0 +1,55 @@
+﻿@model List<UserViewModel>
+
+<h1>Users</h1>
+<hr />
+<p>Esta es la vista del action Index</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>UserName</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+
+                    @*
+                        Etiqueta <a> con tagHelpers
+                        Atributos usados:
+                        asp-controller="[NombreDeController]"
+                        asp-action="[NombreDeAction]"
+                        asp-route-id="[ValorDeParametro]"
+                    *@
+                    @*<a asp-controller="User" asp-action="Detalle" asp-route-id="@item.Id">
+                        @item.Id
+                    </a>*@
+
+                    @*
+                        Etiqueta <a> con href (atributo para redireccionar, se le coloca como valor una url en este caso /[NombreController]/[Action]/[Id])
+                        Atributos usados:
+                        href="[Url]"
+                    *@
+                    <a href="@($"/User/Detalle/{item.Id}")">
+                        @item.Id
+                    </a>
+
+                    @*
+                        Etiqueta <a> con href (atributo para redireccionar, se le coloca como valor una url en este caso con una queryString /[NombreController]/[Action]?id=[Id])
+                        Atributos usados:
+                        href="[Url]"
+                    *@
+                    @*<a href="@($"/User/Detalle?id={item.Id}")">
+                        @item.Id
+                    </a>*@
+                </td>
+                <td>
+                    @item.UserName
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
