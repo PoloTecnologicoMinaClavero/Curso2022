@@ -1,0 +1,68 @@
+﻿@{
+    ViewData["Title"] = "Posts Page";
+}
+
+<div class="row">
+    <div class="col-12">
+        <h2>Tabla posts</h2>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <table id="myTable" class="table table-borderless table-striped table-earning">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>UserId</th>
+                    <th>Titulo</th>
+                    <th>Cuerpo</th>
+                </tr>
+            </thead>
+            <tbody id="testBody"></tbody>
+        </table>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <h2>Formulario posts</h2>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <form id="myForm">
+            <div class="mb-3">
+                <label class="form-label">Id</label>
+                <input type="text" class="form-control" id="idInput" disabled>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">UserId</label>
+                <input type="text" class="form-control" id="userIdInput">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Titulo</label>
+                <input type="text" class="form-control" id="titleInput">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Cuerpo</label>
+                <textarea class="form-control" id="bodyInput" rows="3"></textarea>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <a class="btn btn-success" onclick="create()">Crear</a>
+    </div>
+</div>
+
+@section Scripts {
+    <script type="text/javascript" src="~/js/site.js"></script>
+
+    <script type="text/javascript">
+        getAll();
+    </script>
+}
