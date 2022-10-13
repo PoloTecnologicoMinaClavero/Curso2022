@@ -1,7 +1,7 @@
 ﻿@model Publicacion
 @{   
-    ViewData["Title"] = "Voy a tener suerte";
-    ViewData["Image"] = "/assets/img/post-bg.jpg";
+    ViewData["Title"] = Model.Titulo;
+    ViewData["Image"] = Model.Imagen;
     ViewData["TitleHeader"] = Model.Titulo;
     ViewData["SubTitleHeader"] = Model.SubTitulo;
 }
