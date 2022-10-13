@@ -60,4 +60,7 @@
   <ItemGroup>
     <Build Include="Publicacion.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="PopulateData.sql" />
+  </ItemGroup>
 </Project>
