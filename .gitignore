@@ -14,3 +14,5 @@ _ReSharper.*
 
 /src/4 - ApplicationServices/Assistcargo.Simon.WebApi/Reports/*
 !/src/4 - ApplicationServices/Assistcargo.Simon.WebApi/Reports/.gitkeep
+/ProyectoFinal/ProyectoFinal/BlogDatabase/BlogDatabase.dbmdl
+/ProyectoFinal/ProyectoFinal/BlogDatabase/BlogDatabase.jfm
