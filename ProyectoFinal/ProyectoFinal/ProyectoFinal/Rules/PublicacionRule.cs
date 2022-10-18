@@ -23,5 +23,17 @@ namespace ProyectoFinal.Rules
             }
         }
 
+        public List<Publicacion> GetPostsHome()
+        {
+            var connectionString = _configuration.GetConnectionString("BlogDatabase");
+            using var connection = new SqlConnection(connectionString);
+            {
+                connection.Open();
+                var posts = connection.Query<Publicacion>("SELECT TOP 4 * FROM Publicacion ORDER BY Creacion DESC");
+
+                return posts.ToList();
+            }
+        }
+
     }
 }
