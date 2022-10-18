@@ -6,10 +6,14 @@ namespace ProyectoFinal.Rules
 {
     public class PublicacionRule
     {
+        private readonly IConfiguration _configuration;
+        public PublicacionRule(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
         public Publicacion GetOnePostRandom()
         {
-
-            var connectionString = @"Server=.\SQL2019; Database=BlogDatabase; Trusted_Connection=True";
+            var connectionString = _configuration.GetConnectionString("BlogDatabase");
             using var connection = new SqlConnection(connectionString);
             {
                 connection.Open();
