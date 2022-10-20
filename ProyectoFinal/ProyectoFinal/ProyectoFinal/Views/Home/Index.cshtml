@@ -13,7 +13,7 @@
             {
                 <!-- Post preview-->
                 <div class="post-preview">
-                    <a href="@(string.Format($"/Post/{item.Id}"))">
+                    <a asp-action="post" asp-controller="home" asp-route-id=@item.Id>
                         <h2 class="post-title">@item.Titulo</h2>
                         <h3 class="post-subtitle">@item.SubTitulo</h3>
                     </a>
