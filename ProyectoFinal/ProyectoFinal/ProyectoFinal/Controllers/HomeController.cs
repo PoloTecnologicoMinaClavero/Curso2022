@@ -18,7 +18,6 @@ namespace ProyectoFinal.Controllers
 
         public IActionResult Post(int id)
         {
-
             var rule = new PublicacionRule(_configuration);
             var post = rule.GetPostById(id);
             if (post == null)
@@ -46,6 +45,25 @@ namespace ProyectoFinal.Controllers
             return View();
         }
 
+        [HttpPost]
+        public IActionResult Contacto(Contacto contacto)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View("Contacto", contacto);
+            }
+            var rule = new ContactoRule(_configuration);
+            var mensaje = @"<h1>Gracias por contactarnos</h1>
+                    <p>Hemos recibido tu correo exitosamente.</p>
+                    <p>A la brevedad nos pondremos en contacto</p>
+                    <hr/><p>Saludos</p><p><b>Polo MC</b></p>";
+            rule.SendEmail(contacto.Email, mensaje, "Mensaje Recibido", "Polo Mina Clavero", "polo@polomc.com.ar");
+            rule.SendEmail("joaquin.mateos@juacaxdev.com", contacto.Mensaje, "Nuevo contacto", contacto.Nombre, contacto.Email);
+
+
+            return View("Contacto");
+
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

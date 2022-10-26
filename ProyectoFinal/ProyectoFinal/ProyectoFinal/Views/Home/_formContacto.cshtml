@@ -1,0 +1,27 @@
+﻿@model Contacto
+
+<div class="mb-3">
+    <label for="Nombre" class="form-label">Nombre y Apellido</label>
+    <input asp-for="Nombre" type="text" class="form-control" id="Nombre" aria-describedby="Nombre">
+    @Html.ValidationMessageFor(x=>x.Nombre,"",new {@class="text-danger"})
+</div>
+
+<div class="mb-3">
+    <label for="Email" class="form-label">Correo Electrónico</label>
+    <input asp-for="Email" type="text" class="form-control" id="Email" aria-describedby="Email">
+    @Html.ValidationMessageFor(x=>x.Email,"",new {@class="text-danger"})
+</div>
+
+<div class="mb-3">
+    <label for="Telefono" class="form-label">Teléfono de Contacto</label>
+    <input asp-for="Telefono" type="text" class="form-control" id="Telefono" aria-describedby="Telefono">
+    @Html.ValidationMessageFor(x=>x.Telefono,"",new {@class="text-danger"})
+</div>
+
+<div class="mb-3">
+    <label for="Mensaje" class="form-label">Mensaje</label>
+    <textarea asp-for="Mensaje" class="form-control" id="Mensaje" aria-describedby="Mensaje">
+
+    </textarea>
+    @Html.ValidationMessageFor(x=>x.Mensaje,"",new {@class="text-danger"})
+</div>
