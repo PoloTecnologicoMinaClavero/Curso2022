@@ -60,7 +60,6 @@ namespace ProyectoFinal.Controllers
             rule.SendEmail(contacto.Email, mensaje, "Mensaje Recibido", "Polo Mina Clavero", "polo@polomc.com.ar");
             rule.SendEmail("joaquin.mateos@juacaxdev.com", contacto.Mensaje, "Nuevo contacto", contacto.Nombre, contacto.Email);
 
-
             return View("Contacto");
 
         }
