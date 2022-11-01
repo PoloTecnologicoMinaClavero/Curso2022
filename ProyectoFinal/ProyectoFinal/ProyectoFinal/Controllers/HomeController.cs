@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using ProyectoFinal.Models;
 using ProyectoFinal.Rules;
 using System.Diagnostics;
 
 namespace ProyectoFinal.Controllers
 {
+    
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -24,6 +26,22 @@ namespace ProyectoFinal.Controllers
                 return NotFound();
             return View(post);
         }
+
+        [Authorize]
+        public IActionResult Nuevo()
+        {
+            return View();
+        }
+
+        [Authorize]
+        [HttpPost]
+        public IActionResult Add(Publicacion data)
+        {
+            var rule = new PublicacionRule(_configuration);
+            rule.InsertPost(data);
+            return RedirectToAction("Index");
+        }
+
         public IActionResult Index()
         {
             var rule = new PublicacionRule(_configuration);

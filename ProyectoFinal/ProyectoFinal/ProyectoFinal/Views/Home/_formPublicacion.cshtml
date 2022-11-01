@@ -1,0 +1,40 @@
+﻿@model Publicacion
+
+<div class="mb-3">
+    <label for="Titulo" class="form-label">Titulo</label>
+    <input asp-for="Titulo" type="text" class="form-control" id="Titulo" aria-describedby="Titulo">
+    @Html.ValidationMessageFor(x=>x.Titulo,"",new {@class="text-danger"})
+</div>
+
+<div class="mb-3">
+    <label for="SubTitulo" class="form-label">Subtitulo</label>
+    <input asp-for="SubTitulo" type="text" class="form-control" id="SubTitulo" aria-describedby="SubTitulo">
+    @Html.ValidationMessageFor(x=>x.SubTitulo,"",new {@class="text-danger"})
+</div>
+
+<div class="mb-3">
+    <label for="Creador" class="form-label">Creador</label>
+    <input asp-for="Creador" type="text" class="form-control" id="Creador" aria-describedby="Creador">
+    @Html.ValidationMessageFor(x=>x.Creador,"",new {@class="text-danger"})
+</div>
+
+<div class="mb-3">
+    <label for="Creacion" class="form-label">Creacion</label>
+    <input asp-for="Creacion" type="date" class="form-control" id="Creacion" aria-describedby="Creacion">
+    @Html.ValidationMessageFor(x=>x.Creacion,"",new {@class="text-danger"})
+</div>
+
+<div class="mb-3">
+    <label for="Imagen" class="form-label">Imagen</label>
+    <input asp-for="Imagen" type="text" class="form-control" id="Imagen" aria-describedby="Imagen">
+    @Html.ValidationMessageFor(x=>x.Imagen,"",new {@class="text-danger"})
+</div>
+
+
+<div class="mb-3">
+    <label for="Cuerpo" class="form-label">Cuerpo</label>
+    <textarea asp-for="Cuerpo" class="form-control" id="Cuerpo" aria-describedby="Cuerpo">
+
+    </textarea>
+    @Html.ValidationMessageFor(x=>x.Cuerpo,"",new {@class="text-danger"})
+</div>
