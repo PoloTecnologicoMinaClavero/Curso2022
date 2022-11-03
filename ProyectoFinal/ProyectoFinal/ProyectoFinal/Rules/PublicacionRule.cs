@@ -12,6 +12,22 @@ namespace ProyectoFinal.Rules
         {
             _configuration = configuration;
         }
+
+        public List<Publicacion> GetPublicaciones(int cant, int pagina)
+        {
+            var connectionString = _configuration.GetConnectionString("BlogDatabase");
+            using var connection = new SqlConnection(connectionString);
+            {
+                connection.Open();
+                var query = @$"SELECT * FROM Publicacion 
+                                ORDER BY Creacion DESC 
+                                OFFSET {cant*pagina} ROWS 
+                                FETCH NEXT {cant} ROWS ONLY ";
+                var posts = connection.Query<Publicacion>(query);
+
+                return posts.ToList();
+            }
+        }
         public Publicacion GetOnePostRandom()
         {
             var connectionString = _configuration.GetConnectionString("BlogDatabase");

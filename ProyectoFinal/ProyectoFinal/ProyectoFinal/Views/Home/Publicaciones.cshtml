@@ -25,12 +25,15 @@
                 </div>
                 <!-- Divider-->
                 <hr class="my-4" />
-            }
-
-
-            <!-- Pager-->
+            }           
             <div class="d-flex justify-content-end mb-4">
-                <a class="btn btn-primary text-uppercase" asp-action="publicaciones" asp-controller="home">Older Posts →</a>
+                <!--
+                    PROXIMA CLASE AGREGAR SELECTOR DE CANTIDAD DE POST A VER Y ENVIARLO EN ASP-ROUTE-CANT
+                    AGREGAR BOTON PARA VOLVER PAGINA ANTERIOR (SOLO CUANDO NO ESTÉ EN LA PRIMERA PAGINA)
+                    EN LA ULTIMA PAGINA NO MOSTRAR BOTON "NEXT 5 POST"
+                    NUMERO 5 EN BOTON DEBE SER DINAMICO SEGUN VALOR DE CANT 
+                -->
+                <a class="btn btn-primary text-uppercase" asp-action="publicaciones" asp-controller="home" asp-route-pagina=1>Next 5 Posts →</a>
             </div>
         </div>
     </div>

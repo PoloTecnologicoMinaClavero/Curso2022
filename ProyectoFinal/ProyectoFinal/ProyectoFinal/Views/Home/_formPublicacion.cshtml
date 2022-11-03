@@ -2,19 +2,19 @@
 
 <div class="mb-3">
     <label for="Titulo" class="form-label">Titulo</label>
-    <input asp-for="Titulo" type="text" class="form-control" id="Titulo" aria-describedby="Titulo">
+    <input asp-for="Titulo" type="text" class="form-control" id="Titulo" aria-describedby="Titulo" maxlength="100">
     @Html.ValidationMessageFor(x=>x.Titulo,"",new {@class="text-danger"})
 </div>
 
 <div class="mb-3">
     <label for="SubTitulo" class="form-label">Subtitulo</label>
-    <input asp-for="SubTitulo" type="text" class="form-control" id="SubTitulo" aria-describedby="SubTitulo">
+    <input asp-for="SubTitulo" type="text" class="form-control" id="SubTitulo" aria-describedby="SubTitulo" maxlength="100">
     @Html.ValidationMessageFor(x=>x.SubTitulo,"",new {@class="text-danger"})
 </div>
 
 <div class="mb-3">
     <label for="Creador" class="form-label">Creador</label>
-    <input asp-for="Creador" type="text" class="form-control" id="Creador" aria-describedby="Creador">
+    <input asp-for="Creador" type="text" class="form-control" id="Creador" aria-describedby="Creador" maxlength="50">
     @Html.ValidationMessageFor(x=>x.Creador,"",new {@class="text-danger"})
 </div>
 
@@ -26,7 +26,7 @@
 
 <div class="mb-3">
     <label for="Imagen" class="form-label">Imagen</label>
-    <input asp-for="Imagen" type="text" class="form-control" id="Imagen" aria-describedby="Imagen">
+    <input asp-for="Imagen" type="text" class="form-control" id="Imagen" aria-describedby="Imagen" maxlength="200">
     @Html.ValidationMessageFor(x=>x.Imagen,"",new {@class="text-danger"})
 </div>
 
